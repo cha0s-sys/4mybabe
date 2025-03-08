@@ -87,7 +87,7 @@
                 return;
             }
 
-             let yuanValue = parseFloat((price * mmk).toFixed(2));
+             let yuanValue = parseFloat((price * mmk).toFixed(4));
             yuan.value = yuanValue;
 
                outputArray.push(yuanValue);
@@ -96,7 +96,7 @@
             let totalSum = outputArray.reduce((a, b) => a + b, 0);
 
             
-            output.innerHTML = totalSum.toFixed(2);
+            output.innerHTML = totalSum.toFixed(4);
 
               let li = document.createElement("li");
             li.innerHTML = `${price} * ${mmk} = ${yuanValue} 
@@ -124,7 +124,7 @@
             let totalSum = outputArray.reduce((a, b) => a + b, 0);
 
             
-            output.innerHTML = totalSum.toFixed(2);
+            output.innerHTML = totalSum.toFixed(4);
         };
     </script>
 </body>
